@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LearnIT - Interactive Learning</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">Learn<span>IT</span></div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#lessons">Lessons</a>
+      <a href="#quiz">Quiz</a>
+      <a href="#progress">Progress</a>
+    </nav>
+    <button id="themeBtn" class="theme-btn">🌙</button>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div>
+        <p class="tag">INTERACTIVE LEARNING WEBSITE</p>
+        <h1>Learn IT in a <span>fun way.</span></h1>
+        <p class="hero-text">
+          Learn basic Information Technology topics through lessons, quizzes,
+          activities, and progress tracking.
+        </p>
+        <a class="primary-btn" href="#lessons">Start Learning</a>
+      </div>
+      <div class="hero-card">
+        <div class="big-icon">💻</div>
+        <h3>Learn. Practice. Improve.</h3>
+        <p>Choose a lesson and test what you know.</p>
+      </div>
+    </section>
+
+    <section id="lessons" class="section">
+      <div class="section-heading">
+        <p class="tag">LESSONS</p>
+        <h2>Choose a topic</h2>
+        <p>Click a topic to view a short lesson.</p>
+      </div>
+
+      <div class="cards">
+        <button class="lesson-card" data-topic="html">
+          <div class="icon">🌐</div>
+          <h3>HTML Basics</h3>
+          <p>Learn the structure of web pages.</p>
+        </button>
+        <button class="lesson-card" data-topic="css">
+          <div class="icon">🎨</div>
+          <h3>CSS Basics</h3>
+          <p>Learn how to style a website.</p>
+        </button>
+        <button class="lesson-card" data-topic="js">
+          <div class="icon">⚡</div>
+          <h3>JavaScript</h3>
+          <p>Learn how websites become interactive.</p>
+        </button>
+        <button class="lesson-card" data-topic="python">
+          <div class="icon">🐍</div>
+          <h3>Python Basics</h3>
+          <p>Learn simple programming concepts.</p>
+        </button>
+      </div>
+
+      <div id="lessonBox" class="lesson-box hidden">
+        <h3 id="lessonTitle"></h3>
+        <p id="lessonText"></p>
+        <div id="lessonExample" class="example"></div>
+        <button id="lessonDone" class="primary-btn">Mark as Completed</button>
+      </div>
+    </section>
+
+    <section id="quiz" class="section quiz-section">
+      <div class="section-heading">
+        <p class="tag">QUIZ</p>
+        <h2>Test your knowledge</h2>
+        <p>Answer the questions and get instant feedback.</p>
+      </div>
+
+      <div class="quiz-box">
+        <div class="quiz-top">
+          <span id="questionNumber">Question 1 of 5</span>
+          <span id="scoreLabel">Score: 0</span>
+        </div>
+        <h3 id="question"></h3>
+        <div id="answers"></div>
+        <p id="feedback" class="feedback"></p>
+        <button id="nextBtn" class="primary-btn hidden">Next Question</button>
+        <button id="restartBtn" class="secondary-btn hidden">Restart Quiz</button>
+      </div>
+    </section>
+
+    <section id="progress" class="section">
+      <div class="section-heading">
+        <p class="tag">PROGRESS</p>
+        <h2>Your learning progress</h2>
+        <p>Completed lessons and your latest quiz score.</p>
+      </div>
+
+      <div class="progress-grid">
+        <div class="stat-card">
+          <div class="stat-icon">📚</div>
+          <h3 id="lessonProgress">0 / 4</h3>
+          <p>Lessons Completed</p>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">🏆</div>
+          <h3 id="quizProgress">0%</h3>
+          <p>Latest Quiz Score</p>
+        </div>
+      </div>
+
+      <div class="progress-panel">
+        <div class="progress-label">
+          <span>Overall Progress</span>
+          <strong id="overallText">0%</strong>
+        </div>
+        <div class="progress-bar">
+          <div id="progressFill"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 LearnIT | Interactive Learning Website</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
